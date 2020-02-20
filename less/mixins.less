@@ -1,1 +1,30 @@
 // Mixins in here
+
+.flexJustify(@just){
+    display: flex;
+    justify-content: @just;
+}
+
+.bottomBorder(){
+    border-bottom: 2px dashed @navigation-border;
+}
+
+.setButton(){
+    margin: 0 auto;
+    padding: 1rem 3rem;
+    width: 95%;
+    text-decoration: none;
+    background: @eastern-blue;
+    color: @white;
+    border: 2px solid @shark;
+    border-radius: 10px;
+    text-align: center;
+    &:hover{
+        background: lighten(@eastern-blue, 20%);
+        color: darken(@white, 75%);
+    }
+}
+
+
+// Escapes
+@mobile: ~"(max-width: 500px)";
